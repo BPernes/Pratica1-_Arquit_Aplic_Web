@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MVC Bank API</title>
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <br/><br/><br/>
+      <h2>MVC Bank API Example</h2>
+      <br/>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">COMPEE</th>
+            <th scope="col">ShortName</th>
+            <th scope="col">Document</th>
+            <th scope="col">Type</th>
+            <th scope="col">Url</th>
+          </tr>
+        </thead>
+        <tbody>
+      <% if (banks.length > 0) { %>
+          <% for(var i = 0; i < banks.length; i++) {%> 
+            </tr>
+              <th scope="row"><%= banks[i].COMPEE %></th>
+              <td><h4 ><%= banks[i].ShortName %></h4></td>
+              <td><%= banks[i].Document %></td>
+              <td><%= banks[i].Type %></td>
+              <td><%= banks[i].Url %></td>
+            </tr>
+          <% } %>
+        
+      <% } %>
+    </div>
+  </body>
+</html>
